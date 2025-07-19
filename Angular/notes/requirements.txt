@@ -1,0 +1,20 @@
+requirements : HTML,CSS,JS(variables, datatypes , functions, arrays, objects ,OOP, modules)
+course duration : 3-4 weeks(basic, intermediate)
+timings : 9.10-15   --  10.50-10.55
+course content : 
+         Introduction and Installation
+         JS and TS Basics
+         First Angular Application,folder structure
+         Components
+         data binding
+        directives  -- structural (@if
+                component - communication
+        pipes
+        services
+        forms, routing
+        rxJS
+        final PROJECT
+        
+         
+
+Install node --->npm

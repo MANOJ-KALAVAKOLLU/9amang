@@ -1,0 +1,10 @@
+<header>FAKESHOP</header>
+<div class="products">
+  @for(p of products;track p){
+    <div class="product">
+        <img src={{p.image}} alt={{p.title}}>
+        <h2>{{p.title}}</h2>
+        <p>Price:₹{{p.price}}</p>
+    </div>
+  }
+</div>

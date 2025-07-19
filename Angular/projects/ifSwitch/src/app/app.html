@@ -1,0 +1,50 @@
+<input type="text" placeholder="Enter a number" [(ngModel)]="num" (input)="evenOdd()">
+<button (click)="evenOdd()">check</button>
+<!-- new syntax -->
+ @if(isEven){
+  <h1>{{num}} is even</h1>
+ }
+ @else
+ {
+   <h1>{{num}} is odd</h1>
+ }
+<!--old syntax -->
+<div [ngSwitch]="role">
+  <p *ngSwitchCase="'teacher'">Welcome to teacher</p>
+   <p *ngSwitchCase="'student'">Welcome to Student</p>
+    <p *ngSwitchCase="'admin'">Welcome to Admin</p>
+     <p *ngSwitchDefault>UnAuthorized role</p>
+</div>
+<select [(ngModel)]="role">
+  <option value="student">student</option>
+   <option value="teacher">teacher</option>
+    <option value="admin">admin</option>
+     <option value="other">other</option>
+</select>
+<p *ngFor="let m of arr;let ind=index">
+  The name is {{m}}{{ind}}
+</p>
+@for(m of arr;let ind = $index;track m;){
+  <p>The name is {{m}}{{ind}}</p>
+}
+@switch(role){
+  @case('student'){
+    <p> Welcome to student</p>
+    <h1>take chocolate</h1>
+  }
+  @case('admin'){
+    <p> Welcome to Admin</p>
+  }
+  @case('teacher'){
+    <p> Welcome to Teacher</p>
+  }
+  @default{
+    <p>Unauthorized Role</p>
+  }
+}
+
+
+
+
+
+

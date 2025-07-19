@@ -1,0 +1,35 @@
+Data Binding : It refers to the communication between component file (.ts) and template file (.html) within a component
+There are two kinds of Data Binding such as
+    i. one way Data Binding
+    ii. Two way Data Binding
+
+i. one way Data Binding:
+      using this we can send data from template to component (or) component to template files
+    There are three possible ways for one way data binding:
+    a. string Interpolation : it is used to get the data from component file to template file as a string . it is represented with double braces
+      eg:    //html                                  //ts
+      <p>The fruit is {{name}}<p>              public class componentName{
+                                                  name:string = "apple"
+                                                }
+    But it always pass data as strings, sometimes we need to pass other data such as boolean. for that we can use property Binding
+   
+   b. property Binding: it is also used to get the data from component file to template file as it is. it is represented as square brackets
+      <element   [property]="variable" >
+    eg:    //html                                   //ts
+       <img [src]="url" [alt]="title" />          public class componentName{
+                                                   url = "path";title="shinchan";
+                                                  }
+
+
+  c. Event Binding :  It is used to send the data from template to component file as an event. it is represented with parenthesis ()
+         <element (event) = "functionName()">
+        eg:    //html                                   //ts
+       <button (click)="fun()">click</button>     public class componentName{
+                                                  fun(){
+                                                    alert("hello world")
+                                                  }
+                                                  }
+
+ii. Two way Data Binding : Angular can even make data transfer between component and template file at a time called two way data binding.To use two way data binding, we can import a module named  "formsModule" whih contains a directive "ngModel"
+<element [(ngModel)]="value" >
+

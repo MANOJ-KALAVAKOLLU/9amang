@@ -1,0 +1,25 @@
+main{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    gap: 50px;
+}
+.leftDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.rightDiv{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    background-image: url('https://i.imgflip.com/4/30b1gx.jpg');
+    background-position: center;
+    background-size: cover;
+    font-size: 24px;
+    align-items: end;
+}

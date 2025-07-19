@@ -1,0 +1,65 @@
+Directives: Directives in Angular are used to manipulate or control the DOM of elements or control flow of elements
+There are three types of Directives such as
+  i. structural Directives
+  ii. Property Directives
+  iii. custom Directives
+
+i. structural Directives: These Directives are used to control the flow of elements.That's Why They are also called control flow Directives. There are three structural Directives such as
+    a. ngIf (or) @if
+    b. ngSwitch
+    c. ngFor 
+
+    a. ngIf : it is used to determine which element need to be presented based on a condition.In recent versions of angular, it is modified as @if
+    // old syntax
+    <div *ngIf="isShow else chitti">
+  Welcome to Angular
+</div>
+<ng-template #chitti>
+  <h2>Bye Bye to angular</h2>
+</ng-template>
+// new syntax
+@if(isPrasad)
+{
+  <h1>Hello Prasad</h1>
+}
+@else
+{
+  <h1>Hello Stranger</h1>
+}
+
+2. ngSwitch or @switch: switch is used to select one of multiple options. it is an alternative  to if else if. In switch, we can take multiple cases, the matched case with expression will be executed and In case of no matching to any case, default case will be executed
+
+// old syntax
+<div [ngSwitch]="value">
+     <p *ngSwitchCase="value1">content1</p>
+     <p *ngSwitchCase="value2">content2</p>
+     <p *ngSwitchCase="value3">content3</p>
+     <p *ngSwitchCase="value4">content4</p>
+     <p *ngSwitchDefault>content5</p>
+</div>
+
+// new syntax
+@switch(value)
+{
+   @case(value1){
+     <p>content1</p>
+   }
+     @case(value2){
+     <p>content2</p>
+   }
+     @default{
+     <p>content5</p>
+   }
+}
+
+
+@for or ngFor: for is used to iterate an array of values.it is similar for of syntax. using this we can repeat certain elements again and again
+// app.ts
+  let arr:string[] = ["raju","john","shekhar"]
+//old syntax
+<p  *ngFor="let m of arr"> The name is {{m}} </p>
+//new syntax
+@for(m of arr;track m)
+{
+  <p>The name is {{m}}</p>
+}

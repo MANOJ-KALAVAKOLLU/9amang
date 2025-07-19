@@ -1,0 +1,63 @@
+step 1 : open vs code --> file --> open folder --> create folders
+step 2 : open terminal --> new terminal --> click arrow --> select command prompt
+step 3: i created angular folder by clicking folder icon and created three more folders code, notes and projects. so in terminal  , type cd angular --> cd code
+step 4 : ng new appname  
+           do you want zoneless with zone.js      ---------> n
+           which stylesheet you want -----------------------> css
+           do  you want Server SR and Static SR  ---------> n
+
+Angular application will be installed
+step 5: In terminal , cd appname ---> ng serve 
+your application will run in localhost:4200
+
+folder Structure:
+Angular install multiple folders and files with new app. Each one means  a separate purpose such as
+   i. tsconfig.json   --- it contains rules that are needed for typescript compiler to convert ts into js
+     it contains two separate parts such as
+     i. tsconfig.app.json: contains rules for app
+     ii. tsconfig.spec.json : contains rules for testing
+ii. Readme.md ---  it is the instruction file you specify for others to understand or run you code
+iii. package.json --- it contains the meta data(data about data) such as name,version, scripts, packages installed etc..,
+iv. package-lock.json  -- it contains meta data of package.json
+v .gitignore --- it contains files that are ignored by git
+vi. editorconfig  --- it is used to make sure app works with all editor
+vii. public folder --- it contains public files such as images, documents , icons,fonts etc..,
+viii. node_modules --- it contains complete packages that are needed for angular app
+ix. angular.json   -- it is the starting file for angular builder. it contains rules and settings needed for angular app
+x.  src  --- it contains complete source files
+       index.html ---- main , root html file for angular
+       styles.css   ---- main, css file for angular
+       main.ts     ----- main typescript file for angular. it bootstraps the app component into browser
+ app --- default component folder
+       app.html    ---- template or view file for app
+       app.css      ---- styling file for app
+       app.ts        ---- component file that contains logic and combines html,css,touting,config etc..,
+      app.spec.ts    --- testing file for app
+      app.routes.ts   ---- routing file for app
+      app.config.ts    ---- rules for app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
