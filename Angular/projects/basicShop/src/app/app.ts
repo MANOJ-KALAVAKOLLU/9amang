@@ -2,10 +2,10 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Footer } from './footer/footer';
-
+import {FormsModule} from '@angular/forms'
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer],
+  imports: [RouterOutlet, Header, Footer,FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -1791,4 +1791,12 @@ export class App {
         'https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp',
     },
   ];
+  category:string='All'
+  isShow: boolean = false;
+  fun() {
+    this.isShow = true;
+  }
+  closeBox() {
+     this.isShow = false;
+  }
 }

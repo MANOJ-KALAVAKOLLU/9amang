@@ -1,5 +1,47 @@
 <app-header></app-header>
+<select [(ngModel)]="category">
+  <option value="All">All</option>
+    <option value="beauty">beauty</option>
+    <option value="fragrances">fragrances</option>
+    <option value="furniture">furniture</option>
+    <option value="groceries">groceries</option>
+  </select>
+@switch(category){
+  @case('All'){
+    <h2 class="title">All Products</h2>
+  }
+  @case('beauty'){
+    <h2 class="title">Beauty Products</h2>
+  }
+  @case('fragrances'){
+    <h2 class="title">fragrances Products</h2>
+  }
+  @case('furniture'){
+    <h2 class="title">Furniture Products</h2>
+  }
+  @case('groceries'){
+    <h2 class="title">groceries Products</h2>
+  }
+  @default{
+    <h2>All Products</h2>
+  }
+}
 <main>
-
+  
+  @for(p of products;track p){
+    <div class="product">
+      <img [src]="p.thumbnail" alt="p.title" />
+     <h2>{{p.title}}</h2>
+     <p class="price">Price:${{p.price}}</p>
+     <p class="category">Category:{{p.category}}</p>
+     <button (click)="fun()">Add to Cart</button>
+    </div>
+  }
+    @if(isShow){
+      <div class="modal">
+          <button (click)="closeBox()">❎</button>
+           Product is added successfully
+      </div>
+    }
 </main>
 <app-footer></app-footer>
