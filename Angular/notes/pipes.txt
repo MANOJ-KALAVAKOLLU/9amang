@@ -1,0 +1,24 @@
+Pipes: Pipes are used to transform the data. They use symbol '|'.There are two types of pipes such as 
+    i. default pipes
+    ii. custom pipes
+
+i. default pipes: These pipes are used for different purposes and are provided by angular
+   a.uppercase: we can use this to transform data into uppercase
+   b. lowercase: we can use this to transform data into lowercase
+   c. number/decimal pipe: we can use this to round figure the decimal values
+   <p>{{value | number : 'minIntegerDigits.minFractionDigits - maxFractionDigits'}}
+   d. currency : we can use this pipe to transform the data into specific currency. it will add currency symbol infront of value. By Default, currency symbol is $
+   <p>{{value | currency:'country code'}}
+   for India country code is "INR"
+   e. date pipe : we can use this to transform the data into specific date format. 
+   // ts
+      dt = new Date()
+   //html
+      <p> {{dt | date:'MM/dd/yy - hh:mm:ss'}}</p>   
+   f. slice pipe : we can use this pipe to cut the string betweeen specific indexes
+     <p>{{value | slice:startIndex:endIndex}}</p>
+   h. json pipe :  we can use this pipe to convert object data to json data to print easily
+       <p>{{value | json}}</p>  
+
+ ii. custom pipes: we can create any pipe using "ng generate pipe pipename" in cli. it creates pipename.ts file which contains pipeTransform method and is used to transfor given input
+ 

@@ -1,5 +1,5 @@
 <app-header></app-header>
-<select [(ngModel)]="category">
+<select [(ngModel)]="category" (change)="filterProducts()">
   <option value="All">All</option>
     <option value="beauty">beauty</option>
     <option value="fragrances">fragrances</option>
@@ -28,7 +28,7 @@
 }
 <main>
   
-  @for(p of products;track p){
+  @for(p of newProducts;track p){
     <div class="product">
       <img [src]="p.thumbnail" alt="p.title" />
      <h2>{{p.title}}</h2>

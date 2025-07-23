@@ -63,3 +63,29 @@ i. structural Directives: These Directives are used to control the flow of eleme
 {
   <p>The name is {{m}}</p>
 }
+
+
+
+
+ii. property Directives: These Directives are also called attribute Directives which are used to manipulate the DOM of a element.There are two property Directives such as
+        a.ngClass
+        b. ngStyle
+
+  a. ngClass : it is used to add or removes css class names of an element
+  b. ngStyle : it is used to add or removes inline styles from an element
+  <p [ngClass]="isPara?'para':'para1'" [ngStyle]="{color:isPara?'red':'green'}">This is a simple Paragraph</p>
+
+  iii. custom Directives : we can create our own Directives which can be used to manipulate DOM of an element
+  create Directives :   in terminal "ng generate directive directiveName"
+  it will create directiveName.ts and .spec.ts file . To manipulate an element DOM , we need to use selector Name inside directiveName.ts to elements
+  <element selector>content</element>
+
+  we can select element with following code in directiveName.ts
+  import { ElementRef } from '@angular/core';
+
+  class directiveName{
+    constructor(public ele:ElementRef){
+      this.ele.navtiveElement.style.propertyName = "value";
+      
+    }
+  }

@@ -7,9 +7,11 @@ course content :
          First Angular Application,folder structure
          Components
          data binding
-        directives  -- structural (@if
-                component - communication
+        directives  -- structural (@if,@switch,@for),
+                    -- property (ngClass,ngStyle)
+                    -- custom (ng g d directive-name
         pipes
+        component - communication
         services
         forms, routing
         rxJS

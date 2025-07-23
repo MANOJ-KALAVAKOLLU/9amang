@@ -5,7 +5,7 @@ import { Footer } from './footer/footer';
 import {FormsModule} from '@angular/forms'
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer,FormsModule],
+  imports: [RouterOutlet, Header, Footer, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -1791,12 +1791,22 @@ export class App {
         'https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp',
     },
   ];
-  category:string='All'
+
+  category: string = 'All';
   isShow: boolean = false;
   fun() {
     this.isShow = true;
   }
   closeBox() {
-     this.isShow = false;
+    this.isShow = false;
+  }
+  newProducts: any = this.products;
+  filterProducts() {
+    this.newProducts = this.products.filter(
+      (ele) => ele.category == this.category
+    );
+    if (this.category == "All") {
+      this.newProducts = this.products
+    }
   }
 }
