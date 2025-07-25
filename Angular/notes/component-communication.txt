@@ -1,0 +1,21 @@
+Component Communication:
+      Component means a small reusable part of user Interface. 
+      To generate component, we can use command 
+                "ng generate component component-name"
+      Every component have 4 files (html - template, css - styling, ts - component file, spec.ts - testing file)
+      component file connects all remaining files and generate a name called "selector"
+      we can display one component inside another component called "nested components"
+
+sending or receiving data from one component to another component is called component Communication. There are three types of component Communication. They are
+    i. parent component to child component
+    ii. child component to parent component
+    iii. sharing between any two component
+
+i. parent component to child component:
+      if one component is inside another component, then outer one is called parent component and inner one is called child component
+      For sending data from parent to child we use '@Input'
+      parent sends the data as a property
+           <app-child   title = "John"></app-child>
+      child receives the data in ts using @Input()
+            @Input()   title:string ='';
+            we need to import @Input
