@@ -19,3 +19,14 @@ i. parent component to child component:
       child receives the data in ts using @Input()
             @Input()   title:string ='';
             we need to import @Input
+
+
+ ii.  child to parent component : child components can't send values to the parent components directly so they send in indirect ways
+       a. @Output(): It follows a structure to send values from child to parent using events
+          steps:
+             --- child component creates an event using Eventemitter and calls It
+             --- emit some values when new event triggers
+             --- parent component receives values emitted by child component event
+             --- stores the values and prints them
+
+             
