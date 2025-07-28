@@ -29,4 +29,16 @@ i. parent component to child component:
              --- parent component receives values emitted by child component event
              --- stores the values and prints them
 
-             
+      b. @viewChild or @viewChildern:
+           child component renders always within the parent component, so parent component can directly see child component values using @viewChild or @viewChildern
+           syntax:
+           @ViewChild (childComponentname) variable:childComponentname;
+
+      c. Template Reference Variable : Every parent component can assign its child component a name, using that name it can access any values or methods of child component . That name or variable is called Template Reference Variable
+
+
+
+
+
+
+

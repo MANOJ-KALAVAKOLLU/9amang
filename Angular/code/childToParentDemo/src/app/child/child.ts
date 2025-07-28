@@ -8,7 +8,8 @@ import { Output } from '@angular/core';
   styleUrl: './child.css'
 })
 export class Child {
-  value:string = ''
+  value: string = '';
+  name :string ="shekhar"
  @Output() sendMsg = new EventEmitter();
   send() {
     this.sendMsg.emit(this.value);
