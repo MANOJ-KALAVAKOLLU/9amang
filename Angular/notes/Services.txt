@@ -1,0 +1,16 @@
+Services: Servie is a class that encapsulate data and functionality that can be used throught the application
+services are used to
+          -- share the data
+          -- provide encapsulation
+          -- provide single source of truth
+
+So, These are common files that contains data and functionality to share any component
+     Advantages of services:
+        i. Decoupling:services help components decople with each other so that each component can behave individually
+        ii. Reusability : services can be re used in multiple other components
+
+creating and using a service: 
+       i. To create a service , we can use "ng generate service service-name"
+       ii. it will create service-name.ts file and it contains a class for storing data and functionalities
+       iii. The class is decorated with @Injector for sharing
+       iv. we need to import service in module or component files to make it work
