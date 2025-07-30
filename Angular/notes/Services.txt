@@ -14,3 +14,45 @@ creating and using a service:
        ii. it will create service-name.ts file and it contains a class for storing data and functionalities
        iii. The class is decorated with @Injector for sharing
        iv. we need to import service in module or component files to make it work
+
+
+HttpClient:   HttpClient is a default service provided by Angular which is used for HttpRequests such as GET,POST,PUT,DELTE etc..,. it will interact with API's and returns Observable.
+HttpClient provides basic methods such as
+    get() -- makes the GET request to the specified URL
+    post() -- makes the POST request and send body to the specified URL
+    put() --makes the PUT request to the speified url with changes
+    delete() -- makes the DELETE request to the specified URL
+Difference between fetch and HttpClient:
+    fetch -- normally JS used browser method fetch for HTTP HttpRequests
+          -- it is a method that needs to be called and pass parameters
+          -- it returns promises
+
+   HttpClient -- Angular uses default Service "HttpClient"
+              -- it is a service so need to be injected
+              -- it returns observables
+
+Difference between promises and observables
+    promises -- used for handling Asynchronous JS (better than callbacks)
+             -- A promise will have three states with default state 'pending' and others 'fulfilled' and 'rejected'
+             -- A promise is handled by client using then and catch. If promise resolves it executed then else it executes catch
+
+    Onservable -- used for handling Asynchronous code
+               -- it is a series of promises
+               -- observable can be solved by using subscribe method
+
+
+How to use HttpClient :
+        i. Import HttpClientProvider in app config file
+        ii. import and inject httpclient in component file
+        iii.  do any http reuest using get(),post(),put(),delete()
+        iv. subscribe to the observable and display the result in template
+
+
+
+
+
+
+
+
+
+
