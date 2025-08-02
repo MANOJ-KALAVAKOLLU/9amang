@@ -1,0 +1,12 @@
+<h1>Movie Search App</h1>
+<div>
+  <input type="text" placeholder="Enter a movie name" [(ngModel)]="mname"/>
+  <button (click)="search()">Search</button>
+</div>
+@for(m of movies;track m){
+  <div class="movie">
+     <img src={{m.Poster}} alt={{m.Title}}>
+     <h2>{{m.Title}}</h2>
+     <p>Year: {{m.Year}}</p>
+  </div>
+}
