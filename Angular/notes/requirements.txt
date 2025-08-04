@@ -14,7 +14,7 @@ course content :
         component - communication
         services
         forms, routing
-        rxJS
+        rxJS, advanced(Life cycle hooks, signals,libraries)
         final PROJECT
         
          
