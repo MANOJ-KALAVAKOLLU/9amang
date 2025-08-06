@@ -1,0 +1,23 @@
+Tasks: 
+   Angular First Application - Hello World
+   Angular Components Demo -- like displaying a single component multiple times
+   Angular one way data Binding -- counter (+ , - ,reset)
+   Angular two way Data Binding -- meme project
+   ngIf Task -- type "doremon" or "shinchan" and its picture will be displayed
+   ngSwitch Task -- type any digit from 0-6 , its day will come
+   ngFor Task -- Take array of movies and display them
+   One Revision Task -- shop(fakestoreapi) -- display all products, when click add cart one modal appears, ngswith to select categories
+   pipes  Task -- use all pipes to transform input data
+   Components
+   --- parent to child (@Input) -- display netflix page
+   --- child to parent (@output) -- parent imagelink to child and child counter to parent
+   One Revision Task -- @Input,output,template reference
+   -- services --  raju rani message system.
+   -- httpClient -- weather APP, movieSearchApp,pokemonApp, 
+
+Projects:
+    CRUD -- beeceptor crud api, json server
+    Routing -- personal Portfolio
+    forms -- contact form in portfolio with validation
+
+Netlify, Bootstrap, Tailwind

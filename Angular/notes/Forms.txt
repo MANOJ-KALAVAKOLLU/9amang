@@ -1,0 +1,7 @@
+Forms in Angular: Angular deal with forms using its own default methods and classes. Angular provides two types of forms
+   i. Template Driven Forms
+   ii. component Driven Forms or Reactive Forms
+
+i. Template Driven Forms : These forms are used in template files and each formInput create an Instance of formControl class and all Inputs are within ngForm class.
+   Inputs are connected using 'ngModel' directive
+   Each Inputs contains validations such as touched,untouched,valid,invalid,dirty,pristine etc..,

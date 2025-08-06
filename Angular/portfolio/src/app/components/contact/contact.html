@@ -1,1 +1,30 @@
-<p>contact works!</p>
+<div class=" border border-black shadow shadow-green-500 gap-5 rounded-3xl flex flex-col p-10">
+    <h2 class=" text-5xl">Contact <span class=" text-green-700">Me</span></h2>
+    <form class=" flex flex-col gap-5" #myForm="ngForm" (submit)="onSubmit($event,myForm)">
+        <div>
+            <input type="text" placeholder="Enter your name" name="na" ngModel class="border border-gray-400 rounded-2xl w-full px-2 py-3 text-2xl focus:outline-green-700" required minlength="6" pattern="[A-Za-z]{6,}"/>
+            <p class=" text-red-600" *ngIf="myForm.form.controls['na']?.touched && myForm.form.controls['na']?.errors?.['required']">
+               The Name is Required
+            </p>
+            <p class=" text-red-600" *ngIf="myForm.form.controls['na']?.touched && myForm.form.controls['na']?.errors?.['minlength']">
+               Please Enter minimum 6 characters
+            </p>
+            <p class=" text-red-600" *ngIf="myForm.form.controls['na']?.touched && myForm.form.controls['na']?.errors?.['pattern']">
+               Please Enter only alphabets
+            </p>
+        </div>
+        <div>
+            <input type="text" placeholder="Enter your Email" name="em" ngModel class="border border-gray-400 rounded-2xl w-full px-2 py-3 text-2xl focus:outline-green-700" required/>
+            <p class=" text-red-600" *ngIf="myForm.form.controls['em']?.touched && myForm.form.controls['em']?.errors?.['required']">
+               The Name is Required
+            </p>
+        </div>
+        <div>
+            <textarea placeholder="Enter Message" name="msg" ngModel class=" resize-none border border-gray-400 rounded-2xl w-full px-2 py-3 text-2xl focus:outline-green-700" required></textarea>
+            <p class=" text-red-600" *ngIf="myForm.form.controls['msg']?.touched && myForm.form.controls['msg']?.errors?.['required']">
+               The Name is Required
+            </p>
+        </div>
+        <button class=" text-2xl text-white bg-green-700 py-4">Get In Touch</button>
+    </form>
+</div>
