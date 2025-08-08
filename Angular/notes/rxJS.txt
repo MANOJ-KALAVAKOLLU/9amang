@@ -1,0 +1,8 @@
+rxJS is a library of JS(reactive javascript). rxJS provides observables, subjects,operators
+observables : These are used to handle asynchronous functions in a series. it is like multiple promise one by one
+observables
+   .subscribe(
+    (next)=>{},
+    (err)=>{},
+    (complete)=>{}
+   )
