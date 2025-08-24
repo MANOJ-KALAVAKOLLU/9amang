@@ -9,5 +9,13 @@ import { Movie } from './movie/movie';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('firstApp');
+  constructor() {
+      console.log("hello world")
+  }
+  ngOnChanges() {
+    console.log("on changes called")
+  }
+  ngOnInit() {
+    console.log("on in it is called")
+  }
 }
