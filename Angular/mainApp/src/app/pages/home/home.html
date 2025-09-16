@@ -1,0 +1,29 @@
+<div class="max-w-6xl mx-auto grid grid-cols-12">
+<aside class="flex flex-col gap-3 col-start-1 col-end-3">
+    <button class=" bg-gray-400">New Chat</button>
+    @for(c of conversation;track c){
+        <button class="bg-green-300">{{c.user}}</button>
+    }
+</aside>
+<main class="  flex flex-col gap-5 justify-center items-center col-start-4 col-end-12">
+    
+    <h2>My chat, Ask Anything</h2>
+    @if(loading){
+        <div>loading....</div>
+    }
+    @else
+    {
+        <div class=" max-w-5xl mx-auto fs-3 flex flex-col">
+        @for(c of conversation;track c){
+            <p class=" align-self-start">{{c.user}}</p>
+            <p [innerHTML]="c.ai | chatText" class=" typewriter-text align-self-end"></p>
+        }
+    </div>
+    }
+    <div class=" flex gap-2 border border-black rounded-4xl p-4">
+        <textarea class="resize-none border-0 focus:outline-0 h-20 w-98" [(ngModel)]="userInput"></textarea>
+        <button class=" bg-black text-xl text-white p-3 rounded-2xl" (click)="send()">send</button>
+    </div>
+</main>
+
+</div>

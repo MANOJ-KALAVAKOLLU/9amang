@@ -1,0 +1,32 @@
+1. what is angular?what is use of Angular?
+2. what is difference between angular and react?
+3. what is the difference between Angular and Angular JS?
+4. what is Angular Architecture?
+   Angular supports component driven architecure and Recent version supports standalone components and olden versions uses components that are managed by modules. Every Component have template(html) and component(ts) files that are communicated using data binding. we can manipulate DOM of element using Directive and transform data in template using pipes. one component can share data to another component through common point called services.
+
+5. Explain difference between TS and JS ?
+6. what is component? what is the use of components ? 
+7. Explain Component creation and files in angular.
+8. what is Data Binding and Explain one way and two way data Binding?
+9. what is Directive? Explain structural Directives
+10. Explain property Directives and How to create custom directives
+11. what are pipes and How to use pipes in angular?
+12. what are pure and impure pipes?
+     In angular, All default pipes are pure pipes. A pipe is called pure pipe 
+         i. if it only depends on input
+         ii. pure pipes uses memoization(it remembers previous value based on input. it calls pipe only if input changes)
+      Any pipe that doesn't follow this rules is called impure pipe
+// html
+   <p>{{'10:15:23' | timepipe}}<p>
+//timepipe.ts
+    class TimePipe implements PipeTransform{
+        transform(value:date){
+           const dt = new Date();
+         const x=  dt.getTime() - value.getTime()  
+         return `<p>${x} seconds ago </p>  
+               }
+    }
+
+
+
+         

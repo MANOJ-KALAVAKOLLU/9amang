@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+.typewriter-container {
+  /* Styling for the container */
+  display: inline-block; /* Adjust as needed */
+}
+
+.typewriter-text {
+  font-family: monospace; /* Recommended for consistent character width */
+
+  /* Typing animation */
+  animation: typing 4s ease,
+}
+
+@keyframes typing {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+} */

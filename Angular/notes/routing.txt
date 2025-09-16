@@ -1,0 +1,54 @@
+Routing: Routing allows multiple pages to load within a single page in angular.Angular routing will be enable by routerModule. By default angular creates app.routes.ts file to specify routes.
+     Routes are the configurations that map URLs to specific components.
+     Route is a service that enables relationship between routes.
+     Router Outlet is a directive that marks the location where the router should render the components
+
+steps to setup routing:
+    1. goto app.routes.ts and specify routes with specific path amd component to load
+    2. goto template files and mention <router-outlet> to specify location in which component will be displayed
+    3. goto any template files and mention "link" to navigate to specific path
+
+//app.routes.ts
+export const routes: Routes = [
+    { path: 'about', component: About }, // route
+    { path: 'contact', component: Contact }
+];
+
+
+//app.html
+<header>
+  <a routerLink="about">About</a>
+  <a routerLink="contact">Contact</a>
+</header>
+<router-outlet></router-outlet>
+<footer>
+  This is footer
+</footer>
+
+//app.ts
+import routerOutlet and routerLink
+
+
+//dynamic Routing
+    { path: 'card/:id', component: Card } 
+
+    In component file Inject Activated route and receive dynamic value 
+
+//child routing
+path: 'about', component: About, children: [
+           {path:'projects',component:Projects}  //child routing
+        ]
+path will become /about/projects
+
+we can even restrict routings using Auth Guards
+
+There are 4 Auth guards available
+    -->canActivate  -- works whenever activating a route
+    -->canActivateChild -- works whenever activating a child route
+    -->canDeactivate -- works whenever deactivating a  route
+    -->canMatch -- works whenever matching a specific route
+
+command  : "ng generate guard gurad-name" , click space andselect any guard and enter
+
+
+

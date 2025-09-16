@@ -1,0 +1,22 @@
+<header class=" bg-gray-600 p-5 text-2xl text-center text-white">
+  Movie CRUD
+</header>
+<main>
+  <div></div>
+  <div class=" max-w-5xl m-auto my-5 grid grid-cols-3 gap-5">
+     @for(m of movies;track m){
+      <div class="p-5 d-flex flex-col gap-5 rounded-2xl border-2 border-gray-500">
+           <img src={{m.mUrl}} alt={{m.mName}}>
+           <h2>{{m.mName}}</h2>
+           <p>Year:{{m.mYear}}</p>
+           <div>
+            <button class="mx-2 px-3 py-1.5 bg-green-500 text-white rounded-2xl">Edit</button>
+            <button class="mx-2 px-3 py-1.5 bg-red-500 text-white rounded-2xl" (click)="deleteMovie(m.id)">Delete</button>
+           </div>
+      </div>
+     }
+  </div>
+</main>
+<footer  class=" bg-gray-600 p-5 text-2xl text-center text-white">
+  This Site Belongs to XYZ &copy; 2025
+</footer>

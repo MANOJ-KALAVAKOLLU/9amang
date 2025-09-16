@@ -1,0 +1,5 @@
+pokeAPI-  https://pokeapi.co/api/v2/pokemon/pikachu
+
+https://dev.to/hanzla-baig/150-free-apis-every-developer-needs-to-know-m9j?ref=dailydev
+
+https://beeceptor.com/crud-api/

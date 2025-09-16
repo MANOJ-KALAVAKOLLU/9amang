@@ -1,0 +1,8 @@
+<div [ngClass]="isDark?'dark':'light'" [ngStyle]="{fontSize:isDark?'48px':'24px'}">
+    <p>It is a simple Div</p>
+</div>
+<p [ngClass]="isPara?'para':'para1'" [ngStyle]="{color:isPara?'red':'green'}">This is a simple Paragraph</p>
+<!-- apply class name para to p tag if isPara is true else make class para1 and if isPara is true make color red else green-->
+<button (click)="fun()">click me</button>
+<p appHighlight>Hello world</p>
+<h1 appHighlight>Hiiiiiiiiiiiii</h1>

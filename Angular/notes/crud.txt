@@ -1,0 +1,22 @@
+CRUD operations typically means create,read,update and delete. They are done by httpRequests such as get,post,put,delete from client to server. 
+  SETUP:
+    create a folder "crud" and two folders "backend" and "frontend" inside.
+    In backend folder, create db.json file with an array of object values
+    In frontend folder , create an angular app
+    Install Json server in backend folder by commands 
+          " npm init -y"
+          "npm install -g json-server"
+    Run the json server using commands
+          "npx json-server db.json --watch"
+
+    In frontend application, do get,post,put,delete requests
+
+    For tailwind: https://tailwindcss.com/docs/installation/framework-guides/angular
+       1. npm install tailwindcss @tailwindcss/postcss postcss
+       2. create in frontend folder .postcssrc.json and add following code
+       {
+          "plugins": {
+           "@tailwindcss/postcss": {}
+           }
+       }
+       3. write @import "tailwindcss"; in styles.css

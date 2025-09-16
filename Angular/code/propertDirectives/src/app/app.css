@@ -1,0 +1,12 @@
+.dark{
+    background-color: black;
+    color: white;
+}
+.prasad{
+    animation: bounce 1s ease alternate infinite;
+}
+@keyframes bounce {
+    to{
+        transform: translateY(-10px);
+    }
+}

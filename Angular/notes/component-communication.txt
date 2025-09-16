@@ -1,0 +1,44 @@
+Component Communication:
+      Component means a small reusable part of user Interface. 
+      To generate component, we can use command 
+                "ng generate component component-name"
+      Every component have 4 files (html - template, css - styling, ts - component file, spec.ts - testing file)
+      component file connects all remaining files and generate a name called "selector"
+      we can display one component inside another component called "nested components"
+
+sending or receiving data from one component to another component is called component Communication. There are three types of component Communication. They are
+    i. parent component to child component
+    ii. child component to parent component
+    iii. sharing between any two component
+
+i. parent component to child component:
+      if one component is inside another component, then outer one is called parent component and inner one is called child component
+      For sending data from parent to child we use '@Input'
+      parent sends the data as a property
+           <app-child   title = "John"></app-child>
+      child receives the data in ts using @Input()
+            @Input()   title:string ='';
+            we need to import @Input
+
+
+ ii.  child to parent component : child components can't send values to the parent components directly so they send in indirect ways
+       a. @Output(): It follows a structure to send values from child to parent using events
+          steps:
+             --- child component creates an event using Eventemitter and calls It
+             --- emit some values when new event triggers
+             --- parent component receives values emitted by child component event
+             --- stores the values and prints them
+
+      b. @viewChild or @viewChildern:
+           child component renders always within the parent component, so parent component can directly see child component values using @viewChild or @viewChildern
+           syntax:
+           @ViewChild (childComponentname) variable:childComponentname;
+
+      c. Template Reference Variable : Every parent component can assign its child component a name, using that name it can access any values or methods of child component . That name or variable is called Template Reference Variable
+
+
+
+
+
+
+

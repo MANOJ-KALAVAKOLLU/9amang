@@ -1,0 +1,7 @@
+
+<div style="border:1px solid red;padding: 40px;">
+  <h2>Parent component: {{x}}</h2>
+  <h2>Parent component: {{y}}</h2>
+  <h2>parent component: {{chitti.value}}</h2>
+  <app-child (sendMsg)="receive($event)" #chitti></app-child>
+</div>

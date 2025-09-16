@@ -1,0 +1,45 @@
+Angular :  Angular is an open source front end Framework of Javascript which is used to build single page client Applications.
+    Frameworks provide structure for language and it also provides complete developer environment
+   single page applications load the content of pages without reloading the current page and open source refers to free code to use.
+   The Recent version of Angular is v20.
+React vs Angular:
+       React is a JS library which is used for user Interfaces
+       Angular is a JS framework which provides complete environment
+
+      React is developed and maintained by Meta
+      Angular is developed and maintained by Google
+
+      React uses virtual DOM and Angular uses Real DOM
+ 
+     React provides one way data binding but angular provides two way data binding
+
+Angular vs Angular JS:
+          In 2010, Google developed a framework called Angular JS but it uses javascript. Javascript uses dynamic data typing, so production code becomes difficult. In 2012, microsoft developed a superset of js called typescript which provides static typing. In 2012, Google developed angular 2nd versing using typescript and named it as "Angular"
+
+Installation:
+        To install any packages of Javascript, you need package manager. popular package managers are pnpm, npm , yarn etc..,
+  npm refers to node package manager that will be installed along with node js
+        step1: download and install nodejs from nodejs.org 
+        step 2: goto cmd and check "node  -v" or "npm  -v"
+        step 3 : Install angular by command " npm install -g @angular/cli" and verify after installation by going to command prompt and type "ng v"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

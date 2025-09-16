@@ -1,0 +1,5 @@
+<button class=" btn btn-primary">click me</button>
+<input type="text" id="url" placeholder="Enter image url" [(ngModel)]="url">
+<app-product [imageUrl]="url"  #chitti></app-product>
+<h2>Count: {{C}}</h2>
+<h3>Count:{{chitti.count}}</h3>
